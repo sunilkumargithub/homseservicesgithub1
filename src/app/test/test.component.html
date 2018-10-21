@@ -1,0 +1,10 @@
+<p>Test component Works</p>
+Likes:{{likeChangednumber}}
+Dislikes"{{dislikeChangednumber}}
+<div class="row">
+<div class="col-md-6"><app-write  (likeChanged)='likeChanged($event)'
+  (dislikeChanged)='dislikeChanged($event)'
+  ></app-write></div>
+<div class="col-md-6"><app-read ></app-read></div>
+
+</div>

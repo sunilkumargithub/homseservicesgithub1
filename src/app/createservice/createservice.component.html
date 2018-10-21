@@ -1,0 +1,97 @@
+
+<div class="container">
+<h3>Please fill the form to request service!</h3><BR>
+  <div class="row">
+    <div class="col-xs-12">
+
+      <form (ngSubmit)="onadd(form)" #form="ngForm">
+        <div class="row col-md-offset-2">
+            <div class="col-md-2 form-group">
+                <label for="servicetype">Service Type *</label>
+
+            </div>
+            <div class="col-md-1">
+                <select name="servicetype" class="from-control" style="height:32px; width: 300px;"
+                required
+                ngModel>
+
+                                   <option value="electricity">Electricity</option>
+                                    <option value="carpenter">Carpenter</option>
+                                    <option   value="ac&refrigerator">Ac & Refrigerator</option>
+                                    <option   value="tvrepairandservice">Tv repair & services</option>
+               </select>
+            </div>
+          </div>
+
+             <div class="row col-md-offset-2">
+              <div class="col-md-2 form-group">
+                  <label for="name">Name *</label>
+
+              </div>
+              <div class="col-md-1">
+              <input type="text"
+              name="name"
+               style="height:32px; width: 300px;" class="form-control"
+                required ngModel="sunil">
+
+
+            </div>
+
+
+
+            </div>
+
+
+            <div class="row col-md-offset-2">
+                <div class="col-md-2 form-group">
+                    <label for="flatno">Flat Number *</label>
+
+                </div>
+                <div class="col-md-1">
+                <input type="text"  name="flatno" style="height:32px; width: 300px;" class="form-control"required ngModel="sf1,11j">
+                </div>
+              </div>
+
+             <div class="row col-md-offset-2">
+                <div class="col-md-2 form-group">
+                    <label for="mobile"  >Mobile *</label>
+
+                </div>
+                <div class="col-md-1">
+                <input type="number" name="mobile"  style="height:32px; width: 300px;" class="form-control" required  ngModel="98762565642">
+                </div>
+              </div>
+
+
+             <div class="row col-md-offset-2">
+                <div class="col-md-2 form-group">
+                    <label for="description">Description:</label>
+
+                </div>
+                <div class="col-md-1">
+             <textarea name="description" cols="40" rows="5" ngModel="your description here"></textarea>
+
+                </div>
+                <div>
+                  <input type="hidden" name="status" ngModel="Requested">
+                </div>
+              </div>
+<br>
+<div class="row">
+  <div class="col-md-2 col-md-offset-4">
+<button class="btn btn-success"type="submit" [disabled]="!form.valid">Submit</button>
+  </div>
+  <div style="font-family:cursive"   class="col-md-5">Note: Labels marks with (*) are compulsary to be filled.</div>
+  <br>
+
+</div>
+<div class="createresponse">
+  {{createresponse}}
+</div>
+
+<br><br><br><br><br>
+
+      </form>
+    </div>
+</div>
+</div>

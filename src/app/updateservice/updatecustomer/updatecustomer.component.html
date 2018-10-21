@@ -1,0 +1,88 @@
+
+
+
+<div id="content" #content *ngFor="let tes of customerupdate">
+<h2>Customer Report</h2>
+<div class="row">
+  <form (ngSubmit)="update(form)" #form="ngForm">
+
+     <div class="row">
+     <div class="col-md-1" style="margin-left: 30%;">
+     <label for="id" name=id>Number:</label>
+     </div>
+     <div style="color:green" class="col-md-1" name=id ngModel="{{tes._id}}">{{tes._id}}</div>
+     </div>
+
+                      <div class="row">
+                       <div  class="col-md-1" style="margin-left: 30%;">
+                      <label for="name" name=name>Name:</label>
+                       </div>
+                       <div style="color:green" class="col-md-1" name="name" ngModel="{{tes.name}}">
+                       {{tes.name}}
+                        </div>
+                        </div>
+
+   <div class="row">
+   <div  class="col-md-1" style="margin-left: 30%;">
+   <label for="flatno" name=id>FlatNumber:</label>
+   </div>
+   <div style="color:green" class="col-md-1" name="flatno" ngModel="{{tes.flatno}}">  {{tes.flatno}}
+   </div>
+   </div>
+
+
+
+                         <div class="row">
+                       <div  class="col-md-1" style="margin-left: 30%;">
+                      <label for="servicetype" name=servicetype>ServiceType:</label>
+                       </div>
+                       <div  style="color:green" class="col-md-1" name="servicetype" ngModel="{{tes.servicetype}}">{{tes.servicetype}}</div>
+                     </div>
+
+
+ <div class="row">
+ <div class="col-md-1" style="margin-left: 30%;">
+  <label  for="description" name=id>Description:</label>
+  </div>
+  <div class="col-md-5" style="color:green" name="description" ngModel="{{tes.description}}">{{tes.description}}</div>
+  </div>
+
+                     <div class="row">
+                     <div class="col-md-1"  style="margin-left: 30%;">
+                     <label  for="status" name=status>Status:</label>
+                     </div>
+                     <div class="col-md-6">
+                        <input  style="color:green" readonly value="{{tes.status}}">&nbsp; Change to:
+                        <select style="color:green"  name="status" ngModel="{{tes.status}}">
+                             <option>Requested</option>
+                             <option>Assigned</option>
+                             <option>Completed</option>
+                        </select>
+                     </div>
+
+          <!-- <input type="radio" name="status">Assigned
+          <input type="radio" name="status">Completed -->
+
+                     </div><br>
+
+
+   <div class="row">
+  <div class="col-md-3" style="margin-left: 30%;">
+   <button
+onClick="history.go(0)"
+    class="btn btn-primary" type="submit" >Update</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button  class="btn btn-danger"type="button" (click)="downloadpdf(tes)">Download as pdf</button>
+      </div>
+      <div style="margin-left: 30%;">
+
+      </div>
+   </div>
+    <br>
+
+  </form>
+
+</div>
+  </div>
+
+

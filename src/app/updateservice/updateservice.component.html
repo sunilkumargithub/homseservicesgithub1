@@ -1,0 +1,35 @@
+ <app-updatecustomer></app-updatecustomer>
+ <div id="content" #content>
+<h3 style="">Customer services Requests</h3>
+ <table>
+    <td > Service Id</td>
+    <td > Service Type</td>
+     <td> Customer Name</td>
+     <td >Customer flatno.</td>
+     <td>Customer Mobile</td>
+     <td>Description</td>
+     <td>Status</td>
+     <td>Update</td>
+  </table>
+  <div *ngFor="let customer of getcustomerresponse; let i = index">
+      <table>
+
+          <td >({{i}}) {{customer._id}}</td>
+          <td > {{customer.servicetype}}</td>
+           <td >{{customer.name}}</td>
+           <td>{{customer.flatno}}</td>
+           <td>{{customer.mobile}}</td>
+            <textarea readonly>{{customer.description}}</textarea>
+            <td class="status">
+                 {{customer.status }}
+            </td>
+             <td><button class="btn btn-danger" (click)="updatecustomer(customer)" >Update </button> &nbsp;
+              <button class="btn btn-danger" (click)="deletecustomer(customer)">Delete  </button>
+            </td>
+
+
+      </table>
+  </div>
+  <button type="button" class="btn btn-danger" (click)="downloadPdf()">Download as pdf</button>
+
+<div>

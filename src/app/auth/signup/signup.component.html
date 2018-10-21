@@ -1,0 +1,57 @@
+ <h1 style="margin-left: 40%; color:yellow">Signup</h1>
+
+
+<br><br>
+<div class="content">
+<div class="row" #content>
+<form (ngSubmit)="signup(form)" #form=ngForm>
+
+  <div class="row">
+      <div class="form-group">
+          <div class="col-md-2 col-md-offset-2">
+              <label for="email">Email:*</label>
+          </div>
+        <div class="col-md-4">
+            <input type="email" name="email" class="form-control" autofocus  required email ngModel #emailinput="ngModel">
+            <p *ngIf="emailinput.invalid && emailinput.touched">please enter valid email !</p>
+        </div>
+  </div>
+  </div>
+
+
+<br>
+  <div class="row">
+      <div class="form-group">
+          <div class="col-md-2 col-md-offset-2">
+              <label for="password">Password:*</label>
+          </div>
+        <div class="col-md-4">
+            <input type="text" name="password" class="form-control"  ngModel required #passwordinput="ngModel">
+            <p *ngIf="passwordinput.invalid && passwordinput.touched">Please enter password !</p>
+        </div>
+  </div>
+  </div>
+<br>
+
+  <div class="row">
+      <div class="form-group">
+          <div class="col-md-2 col-md-offset-5">
+           <button  class="btn btn-success">Signup</button>
+                </div>
+
+  </div>
+  </div>
+  <div class="row">
+    <div class="form-group">
+        <div class="col-md-2 col-md-offset-5" style="color:red">
+           {{responsemessage}}
+        </div>
+
+</div>
+</div>
+  </form>
+
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
